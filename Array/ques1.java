@@ -24,7 +24,7 @@ public static void main(String[] args) {
             System.out.println("11. Exit");
             System.out.print("Enter choice: ");
             choice = sc.nextInt();
-
+            
            switch (choice) {
             case 1:
                 if(size==max){

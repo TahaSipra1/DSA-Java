@@ -3,8 +3,16 @@ import java.util.Scanner;
 public class ques1{
     public static class Stack{
         static int max=10;
-        static int[] stackk=new int[max];
+        static int[] arr;
         static int top=-1;
+
+        Stack(int max){
+            this.max=max;
+            arr=new int[max]
+
+
+
+        }
         public static boolean isEmpty(){
             if(top==-1){
                 System.out.println("The Stack is Empty");
@@ -23,28 +31,28 @@ public class ques1{
         public static void push(int value){
             if(!isFull()){
             top++;
-            stackk[top]=value;
+            arr[top]=value;
             System.out.println("The Value :"+value+" Add in Stack");
             }           
         }
 
         public static int pop(){
             if(!isEmpty()){
-            System.err.println("Value "+stackk[top]+" Remove from Stack");
+            System.err.println("Value "+arr[top]+" Remove from Stack");
             }
-            return stackk[top--];
+            return arr[top--];
             
         }
 
         public static int peak(){
-            return stackk[top];
+            return arr[top];
         }
 
         public static void display(){
             if(!isEmpty()){
                 System.out.println("The Stacks Values are ");
            for(int i=top;i>=0;i--)
-            System.out.println(stackk[i]);
+            System.out.println(arr[i]);
            }
         }
 
@@ -56,7 +64,7 @@ public class ques1{
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int choice;
-        Stack s =new Stack();
+        Stack s =new Stack(10);
         do{
             System.out.println("\n----- STACK MENU -----");
             System.out.println("1. Push");
